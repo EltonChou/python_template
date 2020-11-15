@@ -1,0 +1,11 @@
+version: 3
+services:
+    python:
+        image: python:3.9-buster
+        container_name: python
+        volumes:
+            - .:/workspace
+        working_dir: /workspace
+        command: sh .sh/python_init.sh
+        stdin_open: true
+        tty: true
